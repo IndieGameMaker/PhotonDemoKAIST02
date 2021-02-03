@@ -8,7 +8,12 @@ public class BulletCtrl : MonoBehaviour
 
     void Start()
     {
-        GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * speed); 
+        GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * speed);
+    }
+
+    void OnCollisionEnter(Collision coll)
+    {
+        Destroy(this.gameObject);
     }
 
 }
