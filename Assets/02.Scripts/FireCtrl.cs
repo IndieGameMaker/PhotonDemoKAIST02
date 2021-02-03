@@ -19,13 +19,15 @@ public class FireCtrl : MonoBehaviour
     void Update()
     {
         if (pv.IsMine == false) return;
-        
+
         if (Input.GetMouseButtonDown(0))
         {
-           Fire(); 
+           Fire();
+           pv.RPC("Fire" , RpcTarget.Others, null);
         }
     }
 
+    [PunRPC]
     void Fire()
     {
         Instantiate(bullet, firePos.position, firePos.rotation);
