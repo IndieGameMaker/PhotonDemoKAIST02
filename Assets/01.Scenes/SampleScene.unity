@@ -213,7 +213,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -978,6 +978,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6433919027361381447, guid: c911f9556c0c14392bf68a6fad15307e, type: 3}
+      propertyPath: nickNameText
+      value: 
+      objectReference: {fileID: 39347814}
     - target: {fileID: 6433919027361381465, guid: c911f9556c0c14392bf68a6fad15307e, type: 3}
       propertyPath: viewIdField
       value: 1

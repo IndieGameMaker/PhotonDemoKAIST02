@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using Cinemachine;
+//Text Mesh Pro의 네임스페이스
+using TMPro;  
 
 // bf33a4aa-4e6d-46a5-b04b-c1c6353b5fda
 // C:\Users\accountName\AppData\Roaming\Unity\Asset Store\
@@ -10,6 +12,7 @@ public class TankCtrl : MonoBehaviour
 {
     public float moveSpeed = 10.0f;
     public float turnSpeed = 100.0f;
+    public TMP_Text nickNameText;
 
     private Transform tr;
     private PhotonView pv;
@@ -26,6 +29,7 @@ public class TankCtrl : MonoBehaviour
             cv.Follow = this.transform;
             cv.LookAt = this.transform;
         }
+        nickNameText.text = pv.Owner.NickName;
     }
 
     void Update()
