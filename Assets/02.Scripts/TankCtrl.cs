@@ -19,7 +19,13 @@ public class TankCtrl : MonoBehaviour
     {
         tr = GetComponent<Transform>(); 
         pv = GetComponent<PhotonView>(); 
-          
+        cv = GameObject.FindGameObjectWithTag("V_CAM").GetComponent<CinemachineVirtualCamera>();
+
+        if (pv.IsMine)
+        {
+            cv.Follow = this.transform;
+            cv.LookAt = this.transform;
+        }
     }
 
     void Update()
