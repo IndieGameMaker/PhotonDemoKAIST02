@@ -26,8 +26,8 @@ public class TankCtrl : MonoBehaviour
 
         if (pv.IsMine)
         {
-            cv.Follow = this.transform;
-            cv.LookAt = this.transform;
+            cv.Follow = this.gameObject.transform;  //this.transform // transform // gameObject.transform
+            cv.LookAt = this.gameObject.transform;  //this.gameObejct.GetComponent<Transform>()
         }
         nickNameText.text = pv.Owner.NickName;
     }
