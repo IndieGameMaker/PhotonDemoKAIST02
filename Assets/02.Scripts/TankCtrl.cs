@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 
-
 // bf33a4aa-4e6d-46a5-b04b-c1c6353b5fda
 // C:\Users\accountName\AppData\Roaming\Unity\Asset Store\
 public class TankCtrl : MonoBehaviour
@@ -17,7 +16,7 @@ public class TankCtrl : MonoBehaviour
     void Start()
     {
         tr = GetComponent<Transform>(); 
-        pv = GetComponent<PhotonView>();       
+        pv = GetComponent<PhotonView>();   
     }
 
     void Update()
