@@ -49,6 +49,8 @@ public class PhotonManager : MonoBehaviourPunCallbacks
     public override void OnJoinedRoom()
     {
         Debug.Log("Create and Joined Room !!!");
-        PhotonNetwork.Instantiate("Tank", Vector3.zero, Quaternion.identity, 0);
+
+        Vector3 pos = new Vector3(Random.Range(-10, 10), 0.0f, Random.Range(-10, 10));
+        PhotonNetwork.Instantiate("Tank", pos, Quaternion.identity, 0);
     }
 }
