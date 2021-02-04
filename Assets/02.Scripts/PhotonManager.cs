@@ -20,11 +20,14 @@ public class PhotonManager : MonoBehaviourPunCallbacks
 
     void Start()
     {
-        PhotonNetwork.NickName = userName;
-        PhotonNetwork.GameVersion = version;
-        Debug.Log(version);
+        if (!PhotonNetwork.IsConnected)
+        {
+            PhotonNetwork.NickName = userName;
+            PhotonNetwork.GameVersion = version;
+            Debug.Log(version);
 
-        PhotonNetwork.ConnectUsingSettings();
+            PhotonNetwork.ConnectUsingSettings();
+        }
     }
 
     public override void OnConnectedToMaster()
@@ -52,6 +55,7 @@ public class PhotonManager : MonoBehaviourPunCallbacks
         Debug.Log("Create and Joined Room !!!");
 
         Vector3 pos = new Vector3(Random.Range(-10, 10), 0.0f, Random.Range(-10, 10));
-        PhotonNetwork.Instantiate("Tank", pos, Quaternion.identity, 0);
+        //PhotonNetwork.Instantiate("Tank", pos, Quaternion.identity, 0);
+        SceneManager.LoadScene("BattleField");
     }
 }
