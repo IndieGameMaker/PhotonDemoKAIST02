@@ -54,8 +54,7 @@ public class PhotonManager : MonoBehaviourPunCallbacks
     {
         Debug.Log("Create and Joined Room !!!");
 
-        Vector3 pos = new Vector3(Random.Range(-10, 10), 0.0f, Random.Range(-10, 10));
-        //PhotonNetwork.Instantiate("Tank", pos, Quaternion.identity, 0);
+
         SceneManager.LoadScene("BattleField");
     }
 }
