@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BulletCtrl : MonoBehaviour
 {
-    public float speed = 1000.0f;
+    private float speed = 200.0f * 0.03f;
 
     void Start()
     {
