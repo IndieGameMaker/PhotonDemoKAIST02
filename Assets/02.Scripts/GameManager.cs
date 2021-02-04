@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
         Vector3 pos = new Vector3(Random.Range(-10, 10) * 0.03f, 0.0f, Random.Range(-10, 10) * 0.03f);
         PhotonNetwork.Instantiate("Tank", pos, Quaternion.identity, 0);        
         //Avator 생성
-        Vector2 pos02 = Random.insideUnitCircle * 3.0f;
+        Vector2 pos02 = Random.insideUnitCircle * 3.0f;.
         PhotonNetwork.Instantiate("Avator", new Vector3(pos02.x, 1.0f, pos02.y), Quaternion.identity, 0);
     }
 
