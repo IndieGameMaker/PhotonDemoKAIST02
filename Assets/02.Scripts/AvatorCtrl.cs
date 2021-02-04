@@ -15,7 +15,9 @@ public class AvatorCtrl : MonoBehaviour
         pv = GetComponent<PhotonView>();
         if (!pv.IsMine)
         {
-            mrtkObj.SetActive(false);
+            mrtkObj = GameObject.Find("MixedRealityPlayspace");
+            mrtkObj.transform.parent = this.transform;
+            mrtkObj.transform.localPosition = Vector3.zero + (Vector3.up * 1.0f);
         }
     }
 
