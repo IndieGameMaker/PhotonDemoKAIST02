@@ -13,7 +13,7 @@ public class AvatorCtrl : MonoBehaviour
     void Start()
     {
         pv = GetComponent<PhotonView>();
-        if (!PhotonView.IsMine)
+        if (!pv.IsMine)
         {
             mrtkObj.SetActive(false);
         }
