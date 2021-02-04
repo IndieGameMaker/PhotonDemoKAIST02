@@ -203,6 +203,7 @@ GameObject:
   - component: {fileID: 7931682927659657026}
   - component: {fileID: 7931682927659657031}
   - component: {fileID: 7931682927659657030}
+  - component: {fileID: -4726962566640135338}
   m_Layer: 0
   m_Name: Avator
   m_TagString: Untagged
@@ -327,3 +328,16 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
+--- !u!114 &-4726962566640135338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7931682927659657025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 771528928539d41e8b2b82aa7c928507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mrtkObj: {fileID: 0}

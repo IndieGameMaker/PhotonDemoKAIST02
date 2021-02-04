@@ -22,13 +22,13 @@ public class TankCtrl : MonoBehaviour
     {
         tr = GetComponent<Transform>(); 
         pv = GetComponent<PhotonView>(); 
-        cv = GameObject.FindGameObjectWithTag("V_CAM").GetComponent<CinemachineVirtualCamera>();
+        // cv = GameObject.FindGameObjectWithTag("V_CAM").GetComponent<CinemachineVirtualCamera>();
 
-        if (pv.IsMine)
-        {
-            cv.Follow = this.gameObject.transform;  //this.transform // transform // gameObject.transform
-            cv.LookAt = this.gameObject.transform;  //this.gameObejct.GetComponent<Transform>()
-        }
+        // if (pv.IsMine)
+        // {
+        //     cv.Follow = this.gameObject.transform;  //this.transform // transform // gameObject.transform
+        //     cv.LookAt = this.gameObject.transform;  //this.gameObejct.GetComponent<Transform>()
+        // }
         nickNameText.text = pv.Owner.NickName;
     }
 
